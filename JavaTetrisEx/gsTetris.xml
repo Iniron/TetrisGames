@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GSTetrisSettings init.level0="0" init.level1="0" tetris.mode="COMPETE">
+  <tetris.rank date="1480676327799" level="0" lines="0" name="a" score="340"/>
+  <tetris.rank date="1480675563265" level="0" lines="0" name="" score="240"/>
+  <tetris.rank date="1480676360729" level="0" lines="0" name="" score="230"/>
+  <tetris.rank date="1480669866419" level="0" lines="0" name="" score="150"/>
+  <tetris.rank date="1480676360729" level="0" lines="0" name="" score="130"/>
+  <tetris.rank date="1480676327799" level="0" lines="0" name="" score="100"/>
+</GSTetrisSettings>
