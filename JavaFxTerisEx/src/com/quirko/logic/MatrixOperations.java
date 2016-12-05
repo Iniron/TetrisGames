@@ -35,15 +35,16 @@ public class MatrixOperations {
         return returnValue;
     }
 
-    public static int[][] copy(int[][] original) {
-        int[][] myInt = new int[original.length][];
-        for (int i = 0; i < original.length; i++) {
-            int[] aMatrix = original[i];
-            int aLength = aMatrix.length;
-            myInt[i] = new int[aLength];
-            System.arraycopy(aMatrix, 0, myInt[i], 0, aLength);
+    //인자로 들어온 배열을 복사해 리턴한다.
+    public static int[][] copy(int[][] original) {				//인자로 int형 2차원 배열을 받아서
+        int[][] myInt = new int[original.length][];				//myInt라는 새로운 변수에 대입
+        for (int i = 0; i < original.length; i++) {				//2차원배열의 열(row)길이만큼 반복 -> i는 0~3, 즉 4번 반복
+            int[] aMatrix = original[i];						//각 열정보를 int형 배열 aMatrix에 저장
+            int aLength = aMatrix.length;						//aMatix배열의 길이를 얻어와서
+            myInt[i] = new int[aLength];						//그 길이만큼의 새로운 2차원배열 myInt를 만든다.
+            System.arraycopy(aMatrix, 0, myInt[i], 0, aLength); //System.arraycopy(원본, 원본으로부터 읽어올 위치, 복사대상, 복사시작위치, 원본에서 복사본까지 읽어올 양)
         }
-        return myInt;
+        return myInt;											//int[][] myInt를 리턴
     }
 
     public static int[][] merge(int[][] filledFields, int[][] brick, int x, int y) {
@@ -94,6 +95,7 @@ public class MatrixOperations {
 
     public static List<int[][]> deepCopyList(List<int[][]> list){
         return list.stream().map(MatrixOperations::copy).collect(Collectors.toList());
+        //스트림 API로 콜렉션을 질의형식으로 처리한다. list에서 stream을 얻어 copy메소드를 실행한 결과를 다른 list로 저장해 리턴  
     }
 
 }

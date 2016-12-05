@@ -8,13 +8,13 @@ import com.quirko.logic.events.MoveEvent;
 
 public class GameController implements InputEventListener {
 
-    private Board board = new SimpleBoard(25, 10);
+    private Board board = new SimpleBoard(25, 10);										//25, 10크기의 SimpleBoard객체를 생성
 
-    private final GuiController viewGuiController;
+    private final GuiController viewGuiController;										//controller객체
 
-    public GameController(GuiController c) {
-        viewGuiController = c;
-        board.createNewBrick();
+    public GameController(GuiController c) {											//인자로 controller의 객체를 받아서
+        viewGuiController = c;															//ViewGuiController에 저장
+        board.createNewBrick();															//
         viewGuiController.setEventListener(this);
         viewGuiController.initGameView(board.getBoardMatrix(), board.getViewData());
         viewGuiController.bindScore(board.getScore().scoreProperty());
