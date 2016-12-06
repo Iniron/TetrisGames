@@ -18,12 +18,12 @@ public class SimpleBoard implements Board {
     private Point currentOffset;
     private final Score score;
 
-    public SimpleBoard(int width, int height) {
-        this.width = width;
-        this.height = height;
-        currentGameMatrix = new int[width][height];
-        brickGenerator = new RandomBrickGenerator();
-        brickRotator = new BrickRotator();
+    public SimpleBoard(int width, int height) {						//인자값으로 넓이와 높이를 받는다
+        this.width = width;											//넓이를 멤버변수에 설정
+        this.height = height;										//높이를 멤버변수에 설정
+        currentGameMatrix = new int[width][height];					//int형 2차원 배열에 넓이와 높이의 크기로 선언 int[25][10]
+        brickGenerator = new RandomBrickGenerator();				//RandomBrickGenerator클래스를 생성 -> 생성자에서 bricklist에 각 브릭추가
+        brickRotator = new BrickRotator();							//
         score = new Score();
     }
 
