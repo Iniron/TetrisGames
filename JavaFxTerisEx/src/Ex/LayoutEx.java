@@ -24,7 +24,7 @@ public class LayoutEx extends Application{
 		
 	    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Layout.fxml"));				//fxmlloader 생성
 	    Parent root = fxmlLoader.load();											//fxml을 로드해 root를 설정한다.
-	    LayoutEx_Controller abc = fxmlLoader.getController();						//controller객체를 가져온다.	
+	    LayoutEx_ViewController abc = fxmlLoader.getController();						//controller객체를 가져온다.	
 	     
 		Scene scene = new Scene(root, 220, 540);
 		primaryStage.setScene(scene);

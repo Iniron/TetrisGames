@@ -77,7 +77,8 @@ public class GuiController implements Initializable {
             public void handle(KeyEvent keyEvent) {
                 if (isPause.getValue() == Boolean.FALSE && isGameOver.getValue() == Boolean.FALSE) {	//isPause가 FALSE거나 isGameOver가 FALSE경우에만 동작(즉 게임이진행중)
                     if (keyEvent.getCode() == KeyCode.LEFT || keyEvent.getCode() == KeyCode.A) {						//키값이 왼쪽이거나 A인경우
-                        refreshBrick(eventListener.onLeftEvent(new MoveEvent(EventType.LEFT, EventSource.USER)));		//인자를 설정(ViewDat형식)해 refreshBick메소드 호출
+                    	System.out.println("in");
+                        refreshBrick(eventListener.onLeftEvent(new MoveEvent(EventType.LEFT, EventSource.USER)));		//인자를 설정(ViewDat형식)해 refreshBick메소드 호출                        
                         keyEvent.consume();
                         //이벤트는 Scene의 root node부터 시작되어 그안에 포함된 모든 노드에 전달된다. 즉이벤트가 발생하면 Scene에 설정된 Pane부터 이벤트를 받고 
                         //이후 다른 모든 노드에 이벤트가 전달된다. 여기서 event.consume은 더이상 이벤트가 전달되는것을 막는다.

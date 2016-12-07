@@ -8,6 +8,11 @@
     -fx-border-radius: 17px;
 }
 
+#brickPanel{
+	-fx-border-color: white;
+    -fx-border-width: 1px;
+}
+
 .gameBoard {
     -fx-border-color: linear-gradient(#2A5058, #61a2b1);
     -fx-border-width: 12px;
